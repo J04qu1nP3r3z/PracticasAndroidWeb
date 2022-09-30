@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device=width, initial-scale=1.8" />
+    <title>JavaScript</title>
+    <style>
+        *{
+            font-size:28px;
+        }
+        input[type=button] {
+            font-size: 28px;
+            background-color: green;
+            color:white;
+        }
+        .color1 {
+            color: red
+        }
+        .color2 {
+            color: green
+        }
+        .color3 {
+            color: blue
+        }
+        .color4 {
+            color: goldenrod
+        }
+    </style>
+    <script>
+        function Sumar() {
+            let numero1 = document.getElementById('Num1').value;
+            let numero2 = document.getElementById('Num2').value;
+            document.getElementById("Resultado").innerText = "El resutado de la Suma es: " + (parseInt(numero1) + parseInt(numero2));
+            document.getElementById("Resultado").className("color1");
+        }
+        function Resta() {
+            let numero1 = document.getElementById('Num1').value;
+            let numero2 = document.getElementById('Num2').value;
+            document.getElementById("Resultado").innerText = "El resutado de la Resta es: " + (parseInt(numero1) - parseInt(numero2));
+            document.getElementById("Resultado").className("color2");
+        }
+        function Divide() {
+            let numero1 = document.getElementById('Num1').value;
+            let numero2 = document.getElementById('Num2').value;
+            document.getElementById("Resultado").innerText = "El resutado de la Division es: " + (parseInt(numero1) / parseInt(numero2));
+            document.getElementById("Resultado").className("color3");
+        }
+        function Multiplica() {
+            let numero1 = document.getElementById('Num1').value;
+            let numero2 = document.getElementById('Num2').value;
+            document.getElementById("Resultado").innerText = "El resutado de la Multiplicacion es: " + (parseInt(numero1) * parseInt(numero2));
+            document.getElementById("Resultado").attributes("class:color4");
+        }
+    </script>
+</head>
+<body>
+    <label for="Num1">Ingresa el primer valor</label>
+    <input type="Number" name="Num1" id="Num1" />
+    <br /><br />
+    <label for="Num2">ingresa el segundo valor</label>
+    <input type="Number" name="Num2" id="Num2" />
+    <br /><br />
+    <input type="button" name="Calcular" value="Suma" id="Calcular_suma" onclick="Sumar();" />
+    <input type="button" name="Calcular" value="Resta" id="Calcular_suma" onclick="Resta();" />
+    <input type="button" name="Calcular" value="Multiplica" id="Calcular_suma" onclick="Multiplica();" />
+    <input type="button" name="Calcular" value="Divide" id="Calcular_suma" onclick="Divide();" />
+    <br /><br />
+    <div id="Resultado"></div>
+
+
+</body>
+</html>
